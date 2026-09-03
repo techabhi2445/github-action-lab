@@ -1,0 +1,13 @@
+name: Second Action
+on: push
+jobs:
+  first-action-job:
+    runs-on: windows-latest
+    steps:
+      - name: "welcome first action"
+        run: echo "Welcome to the first action"
+  second-action-job:
+    runs-on: windows-latest
+    steps:
+      - name: "welcome second action"
+        run: echo "Welcome to the second action"
