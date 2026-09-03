@@ -1,10 +1,10 @@
- name: First workflow
- on: workflow_dispatch
- jobs:
-     first-job:
-         runs-on: window-latest
-         steps:
-            - name: hello github action
-              run: echo "hello world"
-            - name: bye github action
-              run: echo "bye github action"
+name: First workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: windows-latest
+    steps:
+      - name: hello github action
+        run: echo "hello world"
+      - name: bye github action
+        run: echo "bye github action"
