@@ -1,10 +1,10 @@
 name: Jobs Test
-on: workflow_dispatch
+on: push
 jobs:
   validate-html:
     runs-on: windows-latest
     steps:
-      - name: get-repo-code
+      - name: get repo code
         uses: actions/checkout@3
 
       - name: validate html file
@@ -13,7 +13,7 @@ jobs:
   validate-js:
     runs-on: windows-latest
     steps:
-      - name: get repo-code
+      - name: get repo code
         uses: actions/checkout@3
 
       - name: validate js file
@@ -30,4 +30,4 @@ jobs:
         run: node --check script.js
 
       - name: validate html code
-        run: htmlhint index.html
+        run: npx htmlhint index.html
