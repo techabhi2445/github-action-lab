@@ -5,7 +5,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: get-repo-code
-        uses: actions/checkout@3
+        uses: actions/checkout@4
 
       - name: validate html file
         run: test -f index.html
@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: get repo-code
-        uses: actions/checkout@3
+        uses: actions/checkout@4
 
       - name: validate js file
         run: test -f script.js
@@ -24,7 +24,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: get repo code
-        uses: actions/checkout@3
+        uses: actions/checkout@4
 
       - name: validate js code
         run: node --check script.js

@@ -1,7 +1,5 @@
 name: Second Action
-on:
-  push:
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
   first-action-job:
     runs-on: windows-latest
