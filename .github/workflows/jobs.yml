@@ -1,8 +1,8 @@
 name: Jobs Test
-on: push
+on: workflow_dispatch
 jobs:
   validate-html:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: get-repo-code
         uses: actions/checkout@3
@@ -11,7 +11,7 @@ jobs:
         run: test -f index.html
 
   validate-js:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: get repo-code
         uses: actions/checkout@3
@@ -21,7 +21,7 @@ jobs:
 
   validate-code:
     # needs: [validate-html, validate-js]
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: get repo code
         uses: actions/checkout@3
