@@ -1,5 +1,10 @@
 name: Jobs Test
-on: push
+on:
+  workflow_run:
+    workflows: [Validate Files]
+    types:
+      - completed
+
 jobs:
   validate-html:
     runs-on: windows-latest
